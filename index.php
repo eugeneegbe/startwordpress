@@ -1,15 +1,5 @@
 <?php get_header(); ?>
 
-// Insert Custom Login Logo
-function custom_login_logo() {
-echo '
-<style>
-        .login h1 a { background-image: url(shop.png) !important; background-size: 234px 67px; width:234px; height:67px; display:block; }
-</style>
-';
-}
-add_action( 'login_head', 'custom_login_logo' );
-
     <div class="row">
 
         <div class="col-sm-8 blog-main">
@@ -22,9 +12,19 @@ add_action( 'login_head', 'custom_login_logo' );
 
                     the_post();
                     get_template_part( 'content', get_post_format() );
-                endwhile;
+                endwhile;?>
+
+<!--   For a max of more posts than set per page under reading we include pagination -->
+            <nav>
+                <ul class="pager">
+                    <li><?php next_posts_link( 'Previous' ); ?></li>
+                    <li><?php previous_posts_link( 'Next' ); ?></li>
+                </ul>
+            </nav>
+            <?php
 
             endif;
+
             ?>
 
         </div> <!-- /.blog-main -->
