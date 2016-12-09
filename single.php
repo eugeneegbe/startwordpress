@@ -17,6 +17,15 @@
                   endwhile;
             endif;
             ?>
+
+<!-- if a post has a featured image then we display it-->
+            <?php
+
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+            }
+
+            ?>
         </div> <!-- /.col -->
     </div> <!-- /.row -->
 
