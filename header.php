@@ -8,10 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php  echo get_bloginfo('name');?> </title>
-
+<!--    <title>--><?php // echo get_bloginfo('name');?><!-- </title>-->
+<!--    -->
     <?php wp_head();?>
-
 </head>
 
 <body>
